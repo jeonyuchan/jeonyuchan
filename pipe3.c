@@ -23,7 +23,7 @@ int main(){
 		dup(pfd[0]);//표준 입력을 파이프의 출력으로 연결
 		close(pfd[1]);
 
-		execlp("wc", "wc", "-1", NULL); //파이프의 출력(즉, 자식 프로세스에서 실행한 ls의 결과)이 wc의 입력이 됨
+		execlp("wc", "wc", "-l", NULL); //파이프의 출력(즉, 자식 프로세스에서 실행한 ls의 결과)이 wc의 입력이 됨
 	}
 
 	return 0;
